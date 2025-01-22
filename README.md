@@ -1,59 +1,109 @@
 # ListaDeTarefas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
+## Sobre o Projeto
+O **ListaDeTarefas** é uma aplicação web responsiva desenvolvida com **Angular v19.1.3** e **Bootstrap v5.3+**. Ela permite criar, excluir e marcar tarefas como concluídas, proporcionando uma interface intuitiva e eficaz para organização de atividades diárias.
 
-## Development server
+## Funcionalidades Principais
+- **Adicionar tarefas:** Insira novas tarefas na lista.
+- **Excluir tarefas:** Remova tarefas indesejadas com facilidade.
+- **Marcar como concluído:** Identifique tarefas concluídas de forma clara.
+- **Interface responsiva:** Totalmente otimizada para diferentes dispositivos.
 
-To start a local development server, run:
+---
+
+## Configuração e Execução
+
+### Servidor de Desenvolvimento
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois que o servidor estiver em execução, abra seu navegador e acesse:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+A aplicação recarregará automaticamente ao modificar os arquivos fonte.
+
+---
+
+## Comandos Disponíveis
+
+### Criação de Código
+O Angular CLI fornece ferramentas poderosas de scaffolding. Para gerar um novo componente, execute:
+
+```bash
+ng generate component nome-do-componente
+```
+
+Para visualizar todos os esquemas disponíveis (como componentes, diretivas ou pipes), utilize:
 
 ```bash
 ng generate --help
 ```
 
-## Building
-
-To build the project run:
+### Build do Projeto
+Para compilar o projeto, execute:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os artefatos serão armazenados no diretório `dist/`. Por padrão, o build de produção otimiza a aplicação para desempenho e velocidade.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Testes Unitários
+Para executar testes unitários com o [Karma](https://karma-runner.github.io), utilize:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Testes End-to-End (e2e)
+Para testes de ponta a ponta, execute:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+> **Nota:** O Angular CLI não inclui um framework de testes e2e por padrão. Escolha o que melhor atende às suas necessidades.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tecnologias Utilizadas
+- **Angular v19.1.3**
+- **Bootstrap v5.3+**
+- **TypeScript**
+- **HTML5 e CSS3**
+
+---
+
+## Recursos Adicionais
+Para mais informações sobre o Angular CLI, incluindo referências detalhadas de comandos, visite:
+
+[Angular CLI Overview and Command Reference](https://angular.dev/tools/cli)
+
+---
+
+## Contribuição
+Ficou interessado em contribuir? Siga os passos abaixo:
+1. Faça um fork deste repositório.
+2. Crie uma branch com a funcionalidade ou correção desejada (`git checkout -b minha-branch`).
+3. Faça commit das alterações (`git commit -m 'Minha contribuição'`).
+4. Envie para o repositório remoto (`git push origin minha-branch`).
+5. Abra um Pull Request explicando sua alteração.
+
+---
+
+## Licença
+Este projeto está licenciado sob a [MIT License](LICENSE). Sinta-se à vontade para utilizá-lo e modificá-lo conforme necessário.
+
+---
+
+## Contato
+Dúvidas ou sugestões? Entre em contato:
+- **Email:** josebaitocamacho24@gmail.com
+
+
