@@ -1,0 +1,8 @@
+<div class="input-group justify-content-center">
+  <input
+    type="text"
+    class="form-control task-input"
+    placeholder="Adicione uma nova tarefa"
+    [(ngModel)]="taskText" (keyup.enter)="emitTask()"
+  />
+</div>

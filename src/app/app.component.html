@@ -1,0 +1,53 @@
+<div class="container-fluid p-0">
+  <header class="py-5" style="background-color: #7733FF;">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <i class="bi bi-journal-text text-white me-2" style="font-size: 2rem;"></i>
+        <h1 class="text-white m-0 py-3" style="font-size: 2.5rem;">Lista de Tarefas</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-4" style="background-color: #F0EDF2; min-height: calc(100vh - 150px);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6" style="margin-top: -45px;">
+          <div class="input-group mb-3">
+            <app-add-task-input class="flex-grow-1" (newTask)="onNewTask($event)"></app-add-task-input>
+            <app-create-button class="ms-2"></app-create-button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center mb-3" style="margin-top: 40px;">
+        <div class="col-md-6 d-flex justify-content-between text-center">
+          <span style="color: #7733FF;">Criadas <span class="badge ms-2" style="background-color: #7733FF; color: white;">16</span></span>
+          <span class="text-success">Concluídas <span class="badge bg-success ms-2">20</span></span>
+        </div>
+      </div>
+
+      <!-- Ajuste para encurtar o HR -->
+      <hr style="border-color: #D1CBD7; border-width: 3px; margin-top: 30px; width: 50%; margin-left: auto; margin-right: auto;">
+      
+      <div *ngIf="tasks.length === 0" class="text-center" style="margin-top: 50px;">
+        <i class="bi bi-clipboard2-minus" style="font-size: 3rem; color: #D1CBD7;"></i>
+        <p style="margin-top: 20px;">Você ainda não tem tarefas cadastradas.</p>
+        <p style="margin-top: -20px;  color: #737176;">Crie tarefas e organize teus itens</p>
+      </div>
+
+      <div *ngIf="tasks.length > 0" class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <ng-container *ngFor="let task of tasks; let i = index">
+            <app-task
+              [title]="task.title"
+              [description]="task.description"
+              (taskDeleted)="deleteTask(i)"
+            ></app-task>
+          </ng-container>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>

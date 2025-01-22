@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Estilo do input */
+.task-input {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem; /* Tamanho do texto */
+  height: 3.5rem; /* Altura maior */
+  padding: 0.75rem 1rem; /* Espaçamento interno */
+  border: 1px solid #D1CBD7; /* Borda */
+  border-radius: 0.5rem; /* Bordas arredondadas */
+  background-color: #F0EDF2; /* Cor do fundo */
+  transition: all 0.3s ease;
+  width: 100%; /* Ocupa todo o espaço disponível */
+  max-width: 600px; /* Comprimento máximo */
+  margin: 0 auto; /* Centralização */
+}
+
+/* Cor ao focar no input */
+.task-input:focus {
+  outline: none;
+  border-color: #7733FF;
+  box-shadow: 0 0 8px rgba(119, 51, 255, 0.5);
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 576px) {
+  .task-input {
+    font-size: 1rem; /* Texto menor */
+    height: 3rem; /* Altura ajustada */
+    padding: 0.5rem 0.75rem; /* Espaçamento interno menor */
+    max-width: 100%; /* Largura total */
+  }
+}

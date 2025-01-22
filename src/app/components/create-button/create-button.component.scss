@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Estilos do botão personalizado */
+.btn-custom {
+  background-color: #11B2FD;
+  color: white;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Tamanho padrão do texto */
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+  height: 3.5rem; /* Altura maior */
+}
+
+.btn-custom:hover {
+  background-color: #7733FF;
+  color: white;
+}
+
+/* Responsividade: exibir apenas o ícone em telas menores */
+@media (max-width: 576px) {
+  .btn-custom {
+    padding: 0.5rem; /* Reduzir o espaço ao redor */
+    font-size: 0;   /* Esconde o texto visualmente */
+  }
+
+  .btn-custom i {
+    font-size: 1.5rem; /* Tamanho do ícone */
+  }
+}

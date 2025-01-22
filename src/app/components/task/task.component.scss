@@ -1,0 +1,45 @@
+.task-item {
+  background-color: #ebe7ef;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #dcd6e4;
+  }
+}
+
+.task-checkbox {
+  accent-color: #7733ff; /* Cor personalizada para o checkbox */
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.task-description {
+  font-size: 1rem;
+  color: #737176;
+}
+
+.done .task-title,
+.done .task-description {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #737176;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: #ff6b6b;
+  }
+}
