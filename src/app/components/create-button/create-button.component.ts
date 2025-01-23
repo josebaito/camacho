@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-create-button',
-  imports: [],
   templateUrl: './create-button.component.html',
-  styleUrl: './create-button.component.scss'
+  styleUrls: ['./create-button.component.scss'],
 })
 export class CreateButtonComponent {
+  @Input() taskText: string = '';
+  @Output() taskCreated = new EventEmitter<string>();
 
+  createTask() {
+    if (this.taskText.trim()) {
+      this.taskCreated.emit(this.taskText);
+    }
+  }
 }

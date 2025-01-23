@@ -3,6 +3,8 @@
     type="text"
     class="form-control task-input"
     placeholder="Adicione uma nova tarefa"
-    [(ngModel)]="taskText" (keyup.enter)="emitTask()"
+    [(ngModel)]="taskText"
+    (ngModelChange)="updatePendingTask(taskText)"
+    (keyup.enter)="emitTask()"
   />
 </div>

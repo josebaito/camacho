@@ -43,3 +43,42 @@
     color: #ff6b6b;
   }
 }
+
+
+.task-checkbox {
+  appearance: none; /* Remove o estilo padrão do checkbox */
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #7733ff; /* Cor da borda padrão */
+  border-radius: 50%; /* Torna o checkbox circular */
+  background-color: #dcd6e4; /* Cor de fundo padrão */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:checked {
+    background-color: #4caf50; /* Cor de fundo verde ao marcar */
+    border-color: #4caf50; /* Cor da borda ao marcar */
+  }
+
+  &:checked::after {
+    content: '✓'; /* Símbolo de "check" */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: white; /* Cor do símbolo */
+    font-weight: bold;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px #7733ff; /* Efeito de hover */
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px #7733ff; /* Efeito ao focar */
+  }
+}
+

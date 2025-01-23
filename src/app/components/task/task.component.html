@@ -1,6 +1,11 @@
 <div class="task-item d-flex align-items-center justify-content-between">
   <div class="d-flex align-items-center">
-    <input type="checkbox" class="task-checkbox me-3" (change)="toggleDone()" [checked]="isDone" />
+    <input
+      type="checkbox"
+      class="task-checkbox me-3"
+      (change)="toggleDone()"
+      [checked]="isDone"
+    />
     <div [class.done]="isDone">
       <p class="task-title m-0">{{ title }}</p>
       <p class="task-description m-0">{{ description }}</p>

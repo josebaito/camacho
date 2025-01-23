@@ -1,14 +1,16 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task-input',
   templateUrl: './add-task-input.component.html',
   styleUrls: ['./add-task-input.component.scss'],
-  imports: [FormsModule]
+  standalone: true, // Adicione standalone se necessário
+  imports: [FormsModule], // Certifique-se de incluir FormsModule
 })
 export class AddTaskInputComponent {
   @Output() newTask = new EventEmitter<string>();
+  @Output() taskTextChanged = new EventEmitter<string>();
   taskText: string = '';
 
   emitTask() {
@@ -17,5 +19,8 @@ export class AddTaskInputComponent {
       this.taskText = '';
     }
   }
-}
 
+  updatePendingTask(taskText: string) {
+    this.taskTextChanged.emit(taskText);
+  }
+}

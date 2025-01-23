@@ -3,20 +3,21 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.scss']
+  styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent {
-  @Input() title: string = '';
-  @Input() description: string = '';
+  @Input() title = '';
+  @Input() description = '';
+  @Input() isDone = false;
+
   @Output() taskDeleted = new EventEmitter<void>();
-
-  isDone: boolean = false;
-
-  toggleDone() {
-    this.isDone = !this.isDone;
-  }
+  @Output() taskToggled = new EventEmitter<void>();
 
   deleteTask() {
-    this.taskDeleted.emit();
+    this.taskDeleted.emit(); // Notifica o pai sobre a exclusão
+  }
+
+  toggleDone() {
+    this.taskToggled.emit(); // Notifica o pai sobre a alteração no estado de conclusão
   }
 }
